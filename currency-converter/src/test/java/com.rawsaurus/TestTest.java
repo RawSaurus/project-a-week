@@ -62,6 +62,7 @@ public class TestTest {
         MonetaryAmount convertedAmountUSDtoEUR = oneDollar.with(conversionEUR);
 
         assertEquals("USD 1", oneDollar.toString());
+        assertEquals("1", oneDollar.toString().substring(4));
         assertNotNull(convertedAmountUSDtoEUR);
     }
 
