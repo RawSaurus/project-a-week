@@ -1,0 +1,18 @@
+spring:
+  config:
+    import: env.properties
+  datasource:
+    url: jdbc:postgresql://localhost:5432/attendance
+    username: postgres
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+application:
+  name: Attendance management system
